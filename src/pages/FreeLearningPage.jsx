@@ -203,7 +203,7 @@ const FreeLearningPage = () => {
             intermediate: {
               title: 'Menengah',
               videos: [
-                { title: 'Arabic Grammar (Nahw) - Full Course', channel: 'Understand Al-Qur''an Academy', duration: '10:07:54', url: 'https://www.youtube.com/embed/videoseries?list=PLwB_zY_e4v-b6eJv2a5f7gD1A45L3K37T', link: 'https://www.youtube.com/playlist?list=PLwB_zY_e4v-b6eJv2a5f7gD1A45L3K37T' },
+                { title: 'Arabic Grammar (Nahw) - Full Course', channel: 'Understand Al-Qur\'an Academy', duration: '10:07:54', url: 'https://www.youtube.com/embed/videoseries?list=PLwB_zY_e4v-b6eJv2a5f7gD1A45L3K37T', link: 'https://www.youtube.com/playlist?list=PLwB_zY_e4v-b6eJv2a5f7gD1A45L3K37T' },
                 { title: 'Arabic Conversation Practice', channel: 'Learn Arabic', duration: '1:02:15', url: 'https://www.youtube.com/embed/84iI_pXk3qA', link: 'https://www.youtube.com/watch?v=84iI_pXk3qA' }
               ]
             },
