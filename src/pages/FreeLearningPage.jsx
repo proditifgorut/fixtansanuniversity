@@ -187,6 +187,34 @@ const FreeLearningPage = () => {
               ]
             }
           }
+        },
+        {
+          id: 'arabic',
+          title: 'Bahasa Arab',
+          description: 'Pembelajaran bahasa Arab dari dasar hingga mahir untuk pemahaman Al-Quran dan percakapan.',
+          levels: {
+            fundamental: {
+              title: 'Dasar',
+              videos: [
+                { title: 'Learn Arabic Alphabet from Scratch', channel: 'Learn Arabic with ArabicPod101', duration: '1:07:32', url: 'https://www.youtube.com/embed/e_k9-3F3M-o', link: 'https://www.youtube.com/watch?v=e_k9-3F3M-o' },
+                { title: '100+ Basic Arabic Phrases for Beginners', channel: 'Learn Arabic with Maha', duration: '25:01', url: 'https://www.youtube.com/embed/Vz2h3gB22y0', link: 'https://www.youtube.com/watch?v=Vz2h3gB22y0' }
+              ]
+            },
+            intermediate: {
+              title: 'Menengah',
+              videos: [
+                { title: 'Arabic Grammar (Nahw) - Full Course', channel: 'Understand Al-Qur''an Academy', duration: '10:07:54', url: 'https://www.youtube.com/embed/videoseries?list=PLwB_zY_e4v-b6eJv2a5f7gD1A45L3K37T', link: 'https://www.youtube.com/playlist?list=PLwB_zY_e4v-b6eJv2a5f7gD1A45L3K37T' },
+                { title: 'Arabic Conversation Practice', channel: 'Learn Arabic', duration: '1:02:15', url: 'https://www.youtube.com/embed/84iI_pXk3qA', link: 'https://www.youtube.com/watch?v=84iI_pXk3qA' }
+              ]
+            },
+            advanced: {
+              title: 'Lanjutan',
+              videos: [
+                { title: 'Advanced Arabic Rhetoric (Balaghah)', channel: 'Fajr Arabic', duration: '1:15:30', url: 'https://www.youtube.com/embed/videoseries?list=PL7V68wD0_5w-C-iOQ5X5Q4Q3Z6Z6Z6Z6', link: 'https://www.youtube.com/playlist?list=PL7V68wD0_5w-C-iOQ5X5Q4Q3Z6Z6Z6Z6' },
+                { title: 'Media Arabic: Reading Newspapers', channel: 'Arabic for All', duration: '45:10', url: 'https://www.youtube.com/embed/a-X2-yG4-Yk', link: 'https://www.youtube.com/watch?v=a-X2-yG4-Yk' }
+              ]
+            }
+          }
         }
       ]
     }

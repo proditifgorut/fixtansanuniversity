@@ -9,6 +9,8 @@ import ServicesPage from './pages/ServicesPage';
 import MembershipPage from './pages/MembershipPage';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
+// NEW: Import the new RegisterPage
+import RegisterPage from './pages/RegisterPage';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -25,6 +27,8 @@ function App() {
             <Route path="/layanan" element={<ServicesPage />} />
             <Route path="/membership" element={<MembershipPage />} />
             <Route path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn} />} />
+            {/* NEW: Added route for the registration page */}
+            <Route path="/register" element={<RegisterPage />} />
             <Route path="/dashboard" element={<DashboardPage isLoggedIn={isLoggedIn} />} />
           </Routes>
         </main>

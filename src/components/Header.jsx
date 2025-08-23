@@ -56,7 +56,11 @@ const Header = ({ isLoggedIn }) => {
           <div className="md:hidden py-4 space-y-2">
             <Link to="/" className="block py-2 hover:text-primary-200">Beranda</Link>
             <Link to="/belajar-gratis" className="block py-2 hover:text-primary-200">Belajar Gratis</Link>
-            <Link to="/belajar-ai-trading" className="block py-2 hover:text-primary-200">AI Trading & Fintech</Link>
+            {/* FIX: Unified link text */}
+            <Link to="/belajar-ai-trading" className="flex items-center py-2 hover:text-primary-200">
+              <BrainCircuit className="h-4 w-4 mr-1"/>
+              AI Trading
+            </Link>
             <Link to="/layanan" className="block py-2 hover:text-primary-200">Layanan</Link>
             <Link to="/membership" className="block py-2 hover:text-primary-200">Membership</Link>
             {isLoggedIn ? (

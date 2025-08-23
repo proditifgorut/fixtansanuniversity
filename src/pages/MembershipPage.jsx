@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Check, Star, ArrowRight, Users, Code, BookOpen, Zap } from 'lucide-react';
 
 const MembershipPage = () => {
@@ -168,7 +169,7 @@ const MembershipPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {membershipPlans.map((plan) => (
-              <div key={plan.id} className={`bg-white rounded-xl shadow-lg overflow-hidden relative ${plan.popular ? 'ring-2 ring-secondary-500' : ''}`}>
+              <div key={plan.id} className={`bg-white rounded-xl shadow-lg overflow-hidden relative flex flex-col ${plan.popular ? 'ring-2 ring-secondary-500' : ''}`}>
                 {plan.popular && (
                   <div className="absolute top-4 right-4 bg-secondary-500 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center">
                     <Star className="h-3 w-3 mr-1" />
@@ -176,7 +177,7 @@ const MembershipPage = () => {
                   </div>
                 )}
                 
-                <div className="p-6">
+                <div className="p-6 flex-grow">
                   <h3 className="text-xl font-semibold text-slate-800 mb-2">
                     {plan.name}
                   </h3>
@@ -220,15 +221,21 @@ const MembershipPage = () => {
                       Certificate of completion
                     </li>
                   </ul>
-                  
-                  <button className={`w-full py-3 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 ${
-                    plan.popular 
-                      ? 'bg-secondary-500 hover:bg-secondary-600 text-white' 
-                      : 'bg-primary-600 hover:bg-primary-700 text-white'
-                  }`}>
+                </div>
+                
+                <div className="p-6 pt-0">
+                  {/* FIX: Changed button to a functional Link */}
+                  <Link
+                    to="/login"
+                    className={`w-full py-3 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 ${
+                      plan.popular 
+                        ? 'bg-secondary-500 hover:bg-secondary-600 text-white' 
+                        : 'bg-primary-600 hover:bg-primary-700 text-white'
+                    }`}
+                  >
                     <span>Pilih Paket</span>
                     <ArrowRight className="h-4 w-4" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -265,12 +272,13 @@ const MembershipPage = () => {
             Bergabunglah dengan ratusan developer yang telah sukses mengubah karir mereka
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-secondary-500 hover:bg-secondary-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+            {/* FIX: Changed buttons to functional links */}
+            <a href="mailto:layanan@unisgu.edu?subject=Konsultasi Gratis Membership" className="bg-secondary-500 hover:bg-secondary-600 px-8 py-3 rounded-lg font-semibold transition-colors">
               Konsultasi Gratis
-            </button>
-            <button className="border-2 border-white hover:bg-white hover:text-primary-800 px-8 py-3 rounded-lg font-semibold transition-colors">
+            </a>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="border-2 border-white hover:bg-white hover:text-primary-800 px-8 py-3 rounded-lg font-semibold transition-colors">
               WhatsApp: +62 812-3456-7890
-            </button>
+            </a>
           </div>
         </div>
       </div>

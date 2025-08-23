@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Star } from 'lucide-react';
 
 const ServicesPage = () => {
@@ -100,7 +101,7 @@ const ServicesPage = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <div key={service.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow relative">
+            <div key={service.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow relative flex flex-col">
               {service.popular && (
                 <div className="absolute top-4 right-4 bg-secondary-500 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center">
                   <Star className="h-3 w-3 mr-1" />
@@ -108,7 +109,7 @@ const ServicesPage = () => {
                 </div>
               )}
               
-              <div className="p-6">
+              <div className="p-6 flex-grow">
                 <h3 className="text-xl font-semibold text-slate-800 mb-3">
                   {service.title}
                 </h3>
@@ -124,8 +125,10 @@ const ServicesPage = () => {
                     </div>
                   ))}
                 </div>
+              </div>
 
-                <div className="border-t pt-4 space-y-2">
+              <div className="p-6 border-t">
+                <div className="space-y-2 mb-6">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-500">Harga:</span>
                     <span className="font-semibold text-slate-800">{service.priceRange}</span>
@@ -136,10 +139,14 @@ const ServicesPage = () => {
                   </div>
                 </div>
 
-                <button className="w-full mt-6 bg-primary-600 hover:bg-primary-700 text-white py-3 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2">
+                {/* FIX: Changed button to a functional mailto link */}
+                <a 
+                  href={`mailto:layanan@unisgu.edu?subject=Konsultasi Gratis untuk ${service.title}`}
+                  className="w-full bg-primary-600 hover:bg-primary-700 text-white py-3 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                >
                   <span>Konsultasi Gratis</span>
                   <ArrowRight className="h-4 w-4" />
-                </button>
+                </a>
               </div>
             </div>
           ))}
@@ -203,12 +210,13 @@ const ServicesPage = () => {
             Konsultasi gratis untuk membahas kebutuhan dan solusi terbaik untuk project Anda
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-secondary-600 hover:bg-gray-50 px-8 py-3 rounded-lg font-semibold transition-colors">
+            {/* FIX: Changed buttons to functional links */}
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="bg-white text-secondary-600 hover:bg-gray-50 px-8 py-3 rounded-lg font-semibold transition-colors">
               WhatsApp: +62 812-3456-7890
-            </button>
-            <button className="border-2 border-white hover:bg-white hover:text-secondary-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+            </a>
+            <a href="mailto:layanan@unisgu.edu" className="border-2 border-white hover:bg-white hover:text-secondary-600 px-8 py-3 rounded-lg font-semibold transition-colors">
               Email: layanan@unisgu.edu
-            </button>
+            </a>
           </div>
         </div>
       </div>
