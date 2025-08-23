@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UNISGU - Tansan Open Source University</title>
-    <meta name="description" content="Universitas Insan Technopreneur (UNISGU) - Platform pembelajaran teknologi dan kewirausahaan berbasis komunitas open source yang terbuka untuk semua" />
-    <meta name="author" content="UNISGU Team" />
+    <title>Belajar Gratis - UNISGU</title>
     <link rel="stylesheet" href="/public/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,72 +55,49 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
-        <section class="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-900 text-white py-20">
-          <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center">
-              <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                Tansan Open Source University
-              </h1>
-              <p class="text-xl md:text-2xl mb-8 text-primary-100">
-                Bergabunglah dengan komunitas global yang berkolaborasi membangun masa depan teknologi melalui pembelajaran terbuka dan kontribusi nyata
-              </p>
-              <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/pages/belajar-gratis.html" class="bg-secondary-500 hover:bg-secondary-600 px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
-                  <i data-lucide="book-open" class="h-5 w-5"></i>
-                  <span>Mulai Belajar Gratis</span>
-                  <i data-lucide="arrow-right" class="h-5 w-5"></i>
-                </a>
-                <a href="/pages/membership.html" class="border-2 border-white hover:bg-white hover:text-primary-800 px-8 py-4 rounded-lg font-semibold transition-colors">
-                  Bergabung Komunitas
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+      <!-- Hero Section -->
+      <div class="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-12">
+        <div class="container mx-auto px-4">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Belajar Gratis</h1>
+          <p class="text-xl text-primary-100 max-w-3xl">
+            Akses ribuan materi pembelajaran berkualitas tanpa biaya. Dari programming hingga kewirausahaan, semua tersedia untuk Anda.
+          </p>
+        </div>
+      </div>
 
-        <!-- Why Choose UNISGU -->
-        <section class="py-16 bg-white">
-          <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-              <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-                Mengapa Memilih UNISGU?
-              </h2>
-              <p class="text-xl text-slate-600 max-w-3xl mx-auto">
-                Platform pembelajaran yang didorong oleh komunitas, terbuka untuk semua, dan fokus pada kontribusi nyata
-              </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div class="text-center p-6">
-                <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i data-lucide="users" class="h-8 w-8 text-primary-600"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-3">Pembelajaran Kolaboratif</h3>
-                <p class="text-slate-600">
-                  Belajar bersama komunitas global yang saling mendukung dan berbagi pengetahuan
-                </p>
-              </div>
-              <div class="text-center p-6">
-                <div class="bg-secondary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i data-lucide="code" class="h-8 w-8 text-secondary-600"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-3">Open Source First</h3>
-                <p class="text-slate-600">
-                  Semua materi pembelajaran dan proyek menggunakan teknologi open source terkini
-                </p>
-              </div>
-              <div class="text-center p-6">
-                <div class="bg-accent-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i data-lucide="globe" class="h-8 w-8 text-accent-600"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-3">Akses Global</h3>
-                <p class="text-slate-600">
-                  Platform virtual yang dapat diakses dari mana saja, kapan saja, tanpa batasan geografis
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+      <!-- Learning Categories -->
+      <div class="container mx-auto px-4 py-12">
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap gap-4 mb-8 justify-center">
+          <button class="filter-btn active bg-primary-600 text-white px-6 py-2 rounded-lg font-medium transition-colors" data-category="all">
+            Semua Kategori
+          </button>
+          <button class="filter-btn bg-white hover:bg-primary-50 text-slate-700 px-6 py-2 rounded-lg font-medium transition-colors border" data-category="programming">
+            Programming
+          </button>
+          <button class="filter-btn bg-white hover:bg-primary-50 text-slate-700 px-6 py-2 rounded-lg font-medium transition-colors border" data-category="design">
+            Design
+          </button>
+          <button class="filter-btn bg-white hover:bg-primary-50 text-slate-700 px-6 py-2 rounded-lg font-medium transition-colors border" data-category="business">
+            Bisnis
+          </button>
+          <button class="filter-btn bg-white hover:bg-primary-50 text-slate-700 px-6 py-2 rounded-lg font-medium transition-colors border" data-category="language">
+            Bahasa
+          </button>
+        </div>
+
+        <!-- Learning Content Grid -->
+        <div id="learning-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12">
+          <button id="load-more-btn" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+            Muat Lebih Banyak
+          </button>
+        </div>
+      </div>
     </main>
 
     <!-- Footer -->
@@ -176,5 +151,6 @@
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="/public/js/main.js"></script>
+    <script src="/public/js/belajar-gratis.js"></script>
 </body>
 </html>
